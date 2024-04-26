@@ -1,4 +1,4 @@
-@props(['active'])
+{{-- @props(['active'])
 
 @php
 $classes = ($active ?? false)
@@ -8,4 +8,12 @@ $classes = ($active ?? false)
 
 <a {{ $attributes->merge(['class' => $classes]) }}>
     {{ $slot }}
+</a> --}}
+
+<a href="{{ $route }}" class="{{ $isActive() ? 'active-nav-link' : '' }} flex items-center text-white py-4 pl-6 nav-item">
+    <x-ts-icon name="{{$icon}}" class="h-5 w-5 mr-2"/>
+    {{ $label }}
 </a>
+
+
+

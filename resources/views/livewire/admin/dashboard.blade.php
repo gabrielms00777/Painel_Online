@@ -4,29 +4,24 @@
     <div class="flex flex-wrap mt-6">
         <div class="w-full pr-0 lg:pr-2">
             <div class="flex gap-4">
-                <x-ts-stats :number="50" header="TallStackUI" footer="The best TALL Stack component library">
+                <x-ts-stats :number="$this->onlineUser" header="Usuários Online" footer="Veja quantos usuarios estão online nesse momento!">
+                    <x-slot:right>
+                        <x-ts-icon name="wifi" class="w-6 h-6 text-pink-500" />
+                    </x-slot:right>
+                </x-ts-stats>
+                <x-ts-stats :number="$this->visitorsMonth" header="Visitantes Mês" footer="Veja quantos usuários entraram esse mês!">
                     <x-slot:right>
                         <x-ts-icon name="wrench-screwdriver" class="w-6 h-6 text-pink-500" />
                     </x-slot:right>
                 </x-ts-stats>
-                <x-ts-stats :number="50" header="TallStackUI" footer="The best TALL Stack component library">
-                    <x-slot:right>
-                        <x-ts-icon name="wrench-screwdriver" class="w-6 h-6 text-pink-500" />
-                    </x-slot:right>
-                </x-ts-stats>
-                <x-ts-stats :number="50" header="TallStackUI" footer="The best TALL Stack component library">
-                    <x-slot:right>
-                        <x-ts-icon name="wrench-screwdriver" class="w-6 h-6 text-pink-500" />
-                    </x-slot:right>
-                </x-ts-stats>
-                <x-ts-stats :number="50" header="TallStackUI" footer="The best TALL Stack component library">
+                <x-ts-stats :number="$this->allVisitorCount" header="Todos os visitantes" footer="Veja quantas pessoas entraram no site!">
                     <x-slot:right>
                         <x-ts-icon name="wrench-screwdriver" class="w-6 h-6 text-pink-500" />
                     </x-slot:right>
                 </x-ts-stats>
             </div>
         </div>
-        <div class="w-full lg:w-1/2 pr-0 lg:pr-2">
+        {{-- <div class="w-full lg:w-1/2 pr-0 lg:pr-2">
             <p class="text-xl pb-3 flex items-center">
                 <i class="fas fa-plus mr-3"></i> Monthly Reports
             </p>
@@ -41,96 +36,63 @@
             <div class="p-6 bg-white">
                 <canvas id="chartTwo" width="400" height="200"></canvas>
             </div>
-        </div>
+        </div> --}}
     </div>
 
-    <div class="w-full mt-12">
-        <p class="text-xl pb-3 flex items-center">
-            <i class="fas fa-list mr-3"></i> Latest Reports
-        </p>
-        <div class="bg-white overflow-auto">
-            <table class="min-w-full bg-white">
-                <thead class="bg-gray-800 text-white">
-                    <tr>
-                        <th class="w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm">Name</th>
-                        <th class="w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm">Last name</th>
-                        <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Phone</th>
-                        <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Email</th>
-                    </tr>
-                </thead>
-                <tbody class="text-gray-700">
-                    <tr>
-                        <td class="w-1/3 text-left py-3 px-4">Lian</td>
-                        <td class="w-1/3 text-left py-3 px-4">Smith</td>
-                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500"
-                                href="tel:622322662">622322662</a></td>
-                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500"
-                                href="mailto:jonsmith@mail.com">jonsmith@mail.com</a></td>
-                    </tr>
-                    <tr class="bg-gray-200">
-                        <td class="w-1/3 text-left py-3 px-4">Emma</td>
-                        <td class="w-1/3 text-left py-3 px-4">Johnson</td>
-                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500"
-                                href="tel:622322662">622322662</a></td>
-                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500"
-                                href="mailto:jonsmith@mail.com">jonsmith@mail.com</a></td>
-                    </tr>
-                    <tr>
-                        <td class="w-1/3 text-left py-3 px-4">Oliver</td>
-                        <td class="w-1/3 text-left py-3 px-4">Williams</td>
-                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500"
-                                href="tel:622322662">622322662</a></td>
-                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500"
-                                href="mailto:jonsmith@mail.com">jonsmith@mail.com</a></td>
-                    </tr>
-                    <tr class="bg-gray-200">
-                        <td class="w-1/3 text-left py-3 px-4">Isabella</td>
-                        <td class="w-1/3 text-left py-3 px-4">Brown</td>
-                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500"
-                                href="tel:622322662">622322662</a></td>
-                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500"
-                                href="mailto:jonsmith@mail.com">jonsmith@mail.com</a></td>
-                    </tr>
-                    <tr>
-                        <td class="w-1/3 text-left py-3 px-4">Lian</td>
-                        <td class="w-1/3 text-left py-3 px-4">Smith</td>
-                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500"
-                                href="tel:622322662">622322662</a></td>
-                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500"
-                                href="mailto:jonsmith@mail.com">jonsmith@mail.com</a></td>
-                    </tr>
-                    <tr class="bg-gray-200">
-                        <td class="w-1/3 text-left py-3 px-4">Emma</td>
-                        <td class="w-1/3 text-left py-3 px-4">Johnson</td>
-                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500"
-                                href="tel:622322662">622322662</a></td>
-                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500"
-                                href="mailto:jonsmith@mail.com">jonsmith@mail.com</a></td>
-                    </tr>
-                    <tr>
-                        <td class="w-1/3 text-left py-3 px-4">Oliver</td>
-                        <td class="w-1/3 text-left py-3 px-4">Williams</td>
-                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500"
-                                href="tel:622322662">622322662</a></td>
-                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500"
-                                href="mailto:jonsmith@mail.com">jonsmith@mail.com</a></td>
-                    </tr>
-                    <tr class="bg-gray-200">
-                        <td class="w-1/3 text-left py-3 px-4">Isabella</td>
-                        <td class="w-1/3 text-left py-3 px-4">Brown</td>
-                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500"
-                                href="tel:622322662">622322662</a></td>
-                        <td class="text-left py-3 px-4"><a class="hover:text-blue-500"
-                                href="mailto:jonsmith@mail.com">jonsmith@mail.com</a></td>
-                    </tr>
-                </tbody>
-            </table>
+    <div class="grid grid-cols-2 mt-10 gap-x-4">
+        <div class="">
+            <p class="text-xl pb-3 flex items-center">
+                <i class="fas fa-list mr-3"></i> Paginas mais visitadas
+            </p>
+            <div class="bg-white overflow-auto">
+                <table class="min-w-full bg-white">
+                    <thead class="bg-gray-800 text-white">
+                        <tr>
+                            <th class="w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm">Caminho</th>
+                            <th class="w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm">Quantidade</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-700">
+                        @foreach ($this->allVisitor as $path)
+                        <tr>
+                            <td class="w-1/3 py-3 px-4">{{$path->path}}</td>
+                            <td class="w-1/3 py-3 px-4">{{$path->count}}</td>
+                        </tr>
+                            
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="">
+            <p class="text-xl pb-3 flex items-center">
+                <x-ts-icon name="users" class="h-5 w-5 mr-2"/> Usuários do Painel
+            </p>
+            <div class="bg-white overflow-auto">
+                <table class="min-w-full bg-white">
+                    <thead class="bg-gray-800 text-white">
+                        <tr>
+                            <th class="w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm">Nome</th>
+                            <th class="w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm">Email</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-700">
+                        @foreach ($this->users as $user)
+                        <tr>
+                            <td class="w-1/3 py-3 px-4">{{$user->name}}</td>
+                            <td class="w-1/3 py-3 px-4">{{$user->email}}</td>
+                        </tr>
+                            
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
-        integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>
+    {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
+        integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script> --}}
 
-    <script>
+    {{-- <script>
         var chartOne = document.getElementById('chartOne');
         var myChart = new Chart(chartOne, {
             type: 'bar',
@@ -206,5 +168,5 @@
                 }
             }
         });
-    </script>
+    </script> --}}
 </main>

@@ -18,9 +18,9 @@ class UpdateVisits
      * Create a new job instance.
      */
     public function __construct(
-        public readonly ?string $cookie_id = null,
+        public readonly string $cookie_id,
         public readonly string $path,
-        public readonly ?string $ip = null,
+        public readonly string $ip,
     )
     {
         //
@@ -32,7 +32,6 @@ class UpdateVisits
     public function handle(): void
     {
         $existsVisit = Visit::query()->where('cookie_id', $this->cookie_id)->where('path', $this->path)->exists();
-        // dd($existsVisit, $this->cookie_id,$this->path, $this->ip);
         if(!$existsVisit){
             Visit::query()->create([
                 'cookie_id' => $this->cookie_id,

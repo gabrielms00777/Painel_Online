@@ -18,17 +18,13 @@ class TrackVisits
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if(!$request->cookie('visitor_id')){
-            $cookie_id = uniqid();
-        }
+        $cookie_id = $request->cookie('visitor_id') ?? uniqid();
 
         $ip = $request->ip();
         $path = $request->path();
 
-        UpdateVisits::dispatch($cookie_id ?? $request->cookie('visitor_id'), $path, $ip ?? null);
-        // dd($request->cookie('visitor_id'));
+        UpdateVisits::dispatch($cookie_id, $path, $ip);
 
         return $next($request)->cookie('visitor_id', $cookie_id, 7 * 24 * 60);
-        // return $next($request);
     }
 }

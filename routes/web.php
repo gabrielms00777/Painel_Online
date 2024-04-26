@@ -1,6 +1,6 @@
 <?php
 
-auth()->loginUsingId(1);
+// auth()->loginUsingId(1);
 
 use App\Http\Middleware\TrackOnlineUser;
 use App\Http\Middleware\TrackVisits;
