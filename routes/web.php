@@ -8,7 +8,8 @@ use App\Livewire\Admin\Dashboard;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
-Route::view('/', 'welcome')->middleware([TrackOnlineUser::class, TrackVisits::class]);
+Route::view('/', 'site.index')->middleware([TrackOnlineUser::class, TrackVisits::class])->name('site.index');
+Route::view('/sobre', 'site.about')->middleware([TrackOnlineUser::class, TrackVisits::class])->name('site.about');
 Route::view('/teste', 'welcome')->middleware([TrackOnlineUser::class, TrackVisits::class]);
 
 // Route::get('/a', function () {

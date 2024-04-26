@@ -48,7 +48,7 @@
                 <table class="min-w-full bg-white">
                     <thead class="bg-gray-800 text-white">
                         <tr>
-                            <th class="w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm">Caminho</th>
+                            <th class="w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm">Pagina</th>
                             <th class="w-1/3 text-left py-3 px-4 uppercase font-semibold text-sm">Quantidade</th>
                         </tr>
                     </thead>
