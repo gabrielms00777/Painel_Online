@@ -19,7 +19,7 @@ class CleanInactiveUsers extends Command
      *
      * @var string
      */
-    protected $description = 'Remove os usuários inativos há mais de 15 minutos';
+    protected $description = 'Remove os usuários inativos há mais de 5 minutos';
 
     /**
      * Execute the console command.

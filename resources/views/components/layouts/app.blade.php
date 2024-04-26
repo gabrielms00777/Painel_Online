@@ -56,9 +56,10 @@
             </button>
         </div>
         <nav class="text-white text-base font-semibold pt-3">
-            <x-nav-link route="{{route('dashboard')}}" label="Dashboard" icon="home" />
+            <x-nav-link route="{{ route('dashboard') }}" label="Dashboard" icon="home" />
             <p class=" text-white py-2 pl-6 text-sm">Gerenciamento</p>
-            <x-nav-link route="{{route('profile')}}" label="Perfil" icon="users" />
+            <x-nav-link route="{{ route('users.index') }}" label="Usuários" icon="users" />
+            <x-nav-link route="{{ route('profile') }}" label="Perfil" icon="user" />
         </nav>
         <a href="#"
             class="absolute w-full upgrade-btn bottom-0 active-nav-link text-white flex items-center justify-center py-4">

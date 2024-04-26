@@ -4,19 +4,21 @@
     <div class="flex flex-wrap mt-6">
         <div class="w-full pr-0 lg:pr-2">
             <div class="flex gap-4">
-                <x-ts-stats :number="$this->onlineUser" header="Usuários Online" footer="Veja quantos usuarios estão online nesse momento!">
+                <x-ts-stats :number="$this->onlineUser" header="Usuários Online"
+                    footer="Veja quantos usuarios estão online nesse momento!">
                     <x-slot:right>
-                        <x-ts-icon name="wifi" class="w-6 h-6 text-pink-500" />
+                        <x-ts-icon name="user-plus" class="w-6 h-6 text-green-500" />
                     </x-slot:right>
                 </x-ts-stats>
                 <x-ts-stats :number="$this->visitorsMonth" header="Visitantes Mês" footer="Veja quantos usuários entraram esse mês!">
                     <x-slot:right>
-                        <x-ts-icon name="wrench-screwdriver" class="w-6 h-6 text-pink-500" />
+                        <x-ts-icon name="calendar" class="w-6 h-6 text-yellow-500" />
                     </x-slot:right>
                 </x-ts-stats>
-                <x-ts-stats :number="$this->allVisitorCount" header="Todos os visitantes" footer="Veja quantas pessoas entraram no site!">
+                <x-ts-stats :number="$this->allVisitorCount" header="Todos os visitantes"
+                    footer="Veja quantas pessoas entraram no site!">
                     <x-slot:right>
-                        <x-ts-icon name="wrench-screwdriver" class="w-6 h-6 text-pink-500" />
+                        <x-ts-icon name="user-group" class="w-6 h-6 text-blue-500" />
                     </x-slot:right>
                 </x-ts-stats>
             </div>
@@ -54,11 +56,10 @@
                     </thead>
                     <tbody class="text-gray-700">
                         @foreach ($this->allVisitor as $path)
-                        <tr>
-                            <td class="w-1/3 py-3 px-4">{{$path->path}}</td>
-                            <td class="w-1/3 py-3 px-4">{{$path->count}}</td>
-                        </tr>
-                            
+                            <tr>
+                                <td class="w-1/3 py-3 px-4">{{ $path->path }}</td>
+                                <td class="w-1/3 py-3 px-4">{{ $path->count }}</td>
+                            </tr>
                         @endforeach
                     </tbody>
                 </table>
@@ -66,7 +67,7 @@
         </div>
         <div class="">
             <p class="text-xl pb-3 flex items-center">
-                <x-ts-icon name="users" class="h-5 w-5 mr-2"/> Usuários do Painel
+                <x-ts-icon name="users" class="h-5 w-5 mr-2" /> Usuários do Painel
             </p>
             <div class="bg-white overflow-auto">
                 <table class="min-w-full bg-white">
@@ -78,11 +79,10 @@
                     </thead>
                     <tbody class="text-gray-700">
                         @foreach ($this->users as $user)
-                        <tr>
-                            <td class="w-1/3 py-3 px-4">{{$user->name}}</td>
-                            <td class="w-1/3 py-3 px-4">{{$user->email}}</td>
-                        </tr>
-                            
+                            <tr>
+                                <td class="w-1/3 py-3 px-4">{{ $user->name }}</td>
+                                <td class="w-1/3 py-3 px-4">{{ $user->email }}</td>
+                            </tr>
                         @endforeach
                     </tbody>
                 </table>
