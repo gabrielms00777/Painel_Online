@@ -59,6 +59,7 @@
             <x-nav-link route="{{route('dashboard')}}" label="Dashboard" icon="home" />
             <p class=" text-white py-2 pl-6 text-sm">Gerenciamento</p>
             <x-nav-link route="{{route('profile')}}" label="Perfil" icon="users" />
+            <x-nav-link route="{{route('site.config')}}" label="Editar Site" icon="pencil-square" />
         </nav>
         <a href="#"
             class="absolute w-full upgrade-btn bottom-0 active-nav-link text-white flex items-center justify-center py-4">

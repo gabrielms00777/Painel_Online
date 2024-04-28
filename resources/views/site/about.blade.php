@@ -1,163 +1,70 @@
 <x-site-layout>
-    <!-- who section -->
-
-  <section class="who_section layout_padding">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-5">
-          <div class="img-box">
-            <img src="images/who-img.jpg" alt="">
-          </div>
-        </div>
-        <div class="col-md-7">
-          <div class="detail-box">
-            <div class="heading_container">
-              <h2>
-                WHO WE ARE?
-              </h2>
-            </div>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrudLorem ipsum dolor sit amet, consectetur
-              adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-              veniam, quis nostrud
-            </p>
-            <div>
-              <a href="">
-                Read More
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+  <!--header section start -->
+  <div class="header_section header_bg">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+       <div class="logo"><a href="index.html"><img src="images/logo.png"></a></div>
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+       </button>
+       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="{{ route('site.index') }}">Início</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="{{ route('site.about') }}">Sobre Nós</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="{{ route('site.software') }}">Nossos Sistemas</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="{{ route('site.services') }}">Serviços</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="{{ route('site.contact') }}">Contate-nos</a>
+          </li>
+          </ul>
+       </div>
+    </nav>
+ </div>
+ <!--header section end -->
+ <!--costume header section start -->
+ <div class="costume_header">
+  <div class="container">
+    <div class="menu_main">
+       <ul>
+          <li class="active"><a href="{{ route('site.index') }}">Início</a></li>
+          <li><a href="{{ route('site.about') }}">Sobre Nós</a></li>
+          <li><a href="{{ route('site.software') }}">Nossos Sistemas</a></li>
+          <li><a href="{{ route('site.services') }}">Serviços</a></li>
+          <li><a href="{{ route('site.contact') }}">Contate-nos</a></li>
+       </ul>
     </div>
-  </section>
-
-  <!-- end who section -->
-
-
-  <!-- info section -->
-  <section class="info_section ">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3">
-          <div class="info_contact">
-            <h5>
-              About Shop
-            </h5>
-            <div>
-              <div class="img-box">
-                <img src="images/location-white.png" width="18px" alt="">
-              </div>
-              <p>
-                Address
-              </p>
-            </div>
-            <div>
-              <div class="img-box">
-                <img src="images/telephone-white.png" width="12px" alt="">
-              </div>
-              <p>
-                +01 1234567890
-              </p>
-            </div>
-            <div>
-              <div class="img-box">
-                <img src="images/envelope-white.png" width="18px" alt="">
-              </div>
-              <p>
-                demo@gmail.com
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="info_info">
-            <h5>
-              Informations
-            </h5>
-            <p>
-              ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-            </p>
-          </div>
-        </div>
-
-        <div class="col-md-3">
-          <div class="info_insta">
-            <h5>
-              Instagram
-            </h5>
-            <div class="insta_container">
-              <div>
-                <a href="">
-                  <div class="insta-box b-1">
-                    <img src="images/insta.png" alt="">
-                  </div>
-                </a>
-                <a href="">
-                  <div class="insta-box b-2">
-                    <img src="images/insta.png" alt="">
-                  </div>
-                </a>
-              </div>
-
-              <div>
-                <a href="">
-                  <div class="insta-box b-3">
-                    <img src="images/insta.png" alt="">
-                  </div>
-                </a>
-                <a href="">
-                  <div class="insta-box b-4">
-                    <img src="images/insta.png" alt="">
-                  </div>
-                </a>
-              </div>
-              <div>
-                <a href="">
-                  <div class="insta-box b-3">
-                    <img src="images/insta.png" alt="">
-                  </div>
-                </a>
-                <a href="">
-                  <div class="insta-box b-4">
-                    <img src="images/insta.png" alt="">
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="info_form ">
-            <h5>
-              Newsletter
-            </h5>
-            <form action="">
-              <input type="email" placeholder="Enter your email">
-              <button>
-                Subscribe
-              </button>
-            </form>
-            <div class="social_box">
-              <a href="">
-                <img src="images/fb.png" alt="">
-              </a>
-              <a href="">
-                <img src="images/twitter.png" alt="">
-              </a>
-              <a href="">
-                <img src="images/linkedin.png" alt="">
-              </a>
-              <a href="">
-                <img src="images/youtube.png" alt="">
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="menu_main_1">
+       <ul>
+          <li><a href="{{ route('dashboard') }}">Entrar</a></li>
+       </ul>
     </div>
-  </section>
-
-  <!-- end info_section -->
+ </div>
+ </div>
+ <!--costume header section end -->
+ <!-- about section start -->
+ <div class="about_section layout_padding padding_top_90">
+    <div class="container">
+       <div class="row">
+          <div class="col-md-6">
+             <h1 class="about_taital">About Softwares</h1>
+             <p class="about_text">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in
+                a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a
+                Latin professor at Hampden</p>
+             <div class="read_bt"><a href="#">Read More</a></div>
+          </div>
+          <div class="col-md-6">
+             <div><img src="images/img-1.png" class="image_1"></div>
+          </div>
+       </div>
+    </div>
+ </div>
+ <!--about section end -->
 </x-site-layout>
