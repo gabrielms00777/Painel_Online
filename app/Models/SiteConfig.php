@@ -19,7 +19,11 @@ class SiteConfig extends Model
         'instagram',
         'twitter',
         'linkedin',
-        'seo_meta_tags', // Novo campo para SEO
+        'og_title',
+        'og_description',
+        'og_image',
+        'og_url',
+        'og_type',
     ];
 
     public static function getConfig()

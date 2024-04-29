@@ -18,6 +18,17 @@ return new class extends Migration
             $table->text('description')->nullable(); // Descrição do site
             $table->string('address')->nullable(); // Endereço do site
             $table->string('phone')->nullable(); // Telefone do contato
+
+            $table->string('facebook')->nullable(); // URL do Facebook
+            $table->string('instagram')->nullable(); // URL do Instagram
+            $table->string('twitter')->nullable(); // URL do Twitter
+            $table->string('linkedin')->nullable();
+
+            $table->string('og_title')->nullable(); // Título para Open Graph
+            $table->string('og_description')->nullable(); // Descrição para Open Graph
+            $table->string('og_image')->nullable(); // URL da imagem para Open Graph
+            $table->string('og_url')->nullable(); // URL do site para Open Graph
+            $table->string('og_type')->nullable();
             $table->timestamps();
         });
     }

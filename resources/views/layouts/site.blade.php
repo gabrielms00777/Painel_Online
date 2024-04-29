@@ -5,14 +5,17 @@
    <meta charset="utf-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1">
+
    <!-- mobile metas -->
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
    <!-- site metas -->
    <title>Softwere</title>
    <meta name="keywords" content="">
    <meta name="description" content="">
    <meta name="author" content="">
+
    <!-- owl carousel style -->
    <link rel="stylesheet" type="text/css"
       href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.2.4/assets/owl.carousel.min.css" />
@@ -45,7 +48,7 @@
  <!--footer section end -->
  <!-- copyright section start -->
  <div class="copyright_section">
-    <div class="copyright_text">Copyright 2019. Todos os direitos reservados por <a href="https://suaempresa.com">Sua Empresa</a>. Distribuído por <a href="https://themewagon.com">ThemeWagon</a>.</div>
+    <div class="copyright_text">Copyright 2024. Todos os direitos reservados por <a href="https://suaempresa.com">Sua Empresa</a>. Distribuído por <a href="https://themewagon.com">ThemeWagon</a>.</div>
  </div>
  
  <!-- copyright section end -->

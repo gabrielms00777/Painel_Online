@@ -695,6 +695,18 @@ input.mail_text::placeholder {
     width: 100%;
     float: left;
 }
+.subscribe_btn {
+    width: 170px;
+    float: left;
+    font-size: 18px;
+    color: #ffffff;
+    background-color: #c9e5fb;
+    padding: 5px 0px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 22px;
+    border-radius: 20px;
+}
 .subscribe_bt a {
     width: 170px;
     float: left;

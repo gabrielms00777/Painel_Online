@@ -233,19 +233,23 @@
           </div>
           <div class="col-md-6">
              <div class="email_text">
-                <div class="form-group">
-                   <input type="text" class="email-bt" placeholder="Seu Nome" name="Name">
-                </div>
-                <div class="form-group">
-                   <input type="text" class="email-bt" placeholder="Seu Email" name="Email">
-                </div>
-                <div class="form-group">
-                   <input type="text" class="email-bt" placeholder="Seu Telefone" name="Phone">
-                </div>
-                <div class="form-group">
-                   <textarea class="massage-bt" placeholder="Sua Mensagem (Detalhe seu projeto, orçamento, etc.)" rows="5" id="comment" name="Message"></textarea>
-                </div>
-                <div class="send_btn"><a href="#">Enviar Solicitação</a></div>
+               <form action="{{route('site.contact-post')}}" method="post">
+                  @csrf
+                  <div class="form-group">
+                     <input type="text" class="email-bt" placeholder="Seu Nome" name="name">
+                     <span>Ocorreu um erro</span>
+                  </div>
+                  <div class="form-group">
+                     <input type="text" class="email-bt" placeholder="Seu Email" name="email">
+                  </div>
+                  <div class="form-group">
+                     <input type="text" class="email-bt" placeholder="Seu Telefone" name="phone">
+                  </div>
+                  <div class="form-group">
+                     <textarea class="massage-bt" placeholder="Sua Mensagem (Detalhe seu projeto, orçamento, etc.)" rows="5" id="comment" name="message"></textarea>
+                  </div>
+                  <div class="send_btn"><button class="subscribe_bt subscribe_btn" style="" type="submit">Enviar Solicitação</button></div>
+               </form>
              </div>
           </div>
        </div>

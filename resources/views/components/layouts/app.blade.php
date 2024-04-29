@@ -49,17 +49,23 @@
 
     <aside class="relative bg-sidebar h-screen w-64 hidden sm:block shadow-xl">
         <div class="p-6">
-            <a href="index.html" class="text-white text-3xl font-semibold uppercase hover:text-gray-300">Admin</a>
-            <button
+            <a href="{{route('dashboard')}}" class="text-white text-3xl font-semibold uppercase hover:text-gray-300">Admin</a>
+            <a href='{{ route('site.index') }}' target="_blank"
                 class="w-full bg-white cta-btn font-semibold py-2 mt-5 rounded-br-lg rounded-bl-lg rounded-tr-lg shadow-lg hover:shadow-xl hover:bg-gray-300 flex items-center justify-center">
-                <i class="fas fa-plus mr-3"></i> New Report
-            </button>
+                <i class="fas fa-plus mr-3"></i> Visitar Site
+            </a>
         </div>
         <nav class="text-white text-base font-semibold pt-3">
             <x-nav-link route="{{route('dashboard')}}" label="Dashboard" icon="home" />
             <p class=" text-white py-2 pl-6 text-sm">Gerenciamento</p>
             <x-nav-link route="{{route('profile')}}" label="Perfil" icon="users" />
             <x-nav-link route="{{route('site.config')}}" label="Editar Site" icon="pencil-square" />
+            <x-nav-link route="{{route('site.contacts-messages')}}" label="Messagens de Contato" icon="chat-bubble-bottom-center-text" />
+            <p class=" text-white py-2 pl-6 text-sm">Suporte</p>
+            <a href="" class="flex items-center text-white py-4 pl-6 nav-item">
+                <x-ts-icon name="phone-arrow-up-right" class="h-5 w-5 mr-2"/>
+                Whatsapp
+            </a>
         </nav>
         <a href="#"
             class="absolute w-full upgrade-btn bottom-0 active-nav-link text-white flex items-center justify-center py-4">

@@ -23,7 +23,11 @@
                                 <x-ts-input label="Linkedin" wire:model='linkedin' />
                             </x-ts-tab.items>
                             <x-ts-tab.items tab="SEO">
-                                Tab 3
+                                <x-ts-input label="OG Ttle" wire:model='og_title' />
+                                <x-ts-input label="OG Descrição" wire:model='og_description' />
+                                <x-ts-input label="OG Link da Imagem" wire:model='og_image' />
+                                <x-ts-input label="OG URL" wire:model='og_url' />
+                                <x-ts-input label="OG Tipo" wire:model='og_type' />
                             </x-ts-tab.items>
                             <x-slot:footer>
                                 <x-ts-button href="{{route('site.config')}}">Cancelar</x-ts-button>
