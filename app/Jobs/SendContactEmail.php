@@ -2,7 +2,9 @@
 
 namespace App\Jobs;
 
+use App\Mail\ContactMessageReceived;
 use App\Models\ContactMessage;
+use App\Models\SiteConfig;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
@@ -30,7 +32,6 @@ class SendContactEmail
      */
     public function handle(): void
     {
-        Mail::send();
-        dd('emailcontactjob');
+        Mail::to(SiteConfig::getConfig()->contact_email)->send(new ContactMessageReceived($this->contactMessage));
     }
 }

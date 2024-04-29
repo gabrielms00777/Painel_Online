@@ -12,16 +12,16 @@ class UserForm extends Form
     public ?User $user;
 
     #[Validate(['required', 'string', 'max:50'])]
-    public string $name = 'teste';
+    public string $name = '';
 
     #[Validate(['required', 'max:50', 'email'])]
-    public string $email = 'teste@teste';
+    public string $email = '';
 
     #[Validate(['required', 'string', 'max:50', 'confirmed'])]
-    public string $password = 'teste';
+    public string $password = '';
 
     #[Validate(['required', 'string', 'max:50'])]
-    public string $password_confirmation  = 'teste';
+    public string $password_confirmation  = '';
 
 
     public function setUser()

@@ -7,6 +7,7 @@ use App\Http\Middleware\TrackOnlineUser;
 use App\Http\Middleware\TrackVisits;
 use App\Livewire\Admin\ContactMessage;
 use App\Livewire\Admin\Dashboard;
+use App\Livewire\Admin\Profile;
 use App\Livewire\Admin\SiteConfig;
 use App\Livewire\Admin\User;
 use Illuminate\Support\Facades\Artisan;
@@ -35,7 +36,15 @@ Route::middleware('auth')->group(function(){
     Route::get('users/create', User\Create::class)->name('users.create');
     Route::get('users/{user}/edit', User\Edit::class)->name('users.edit');
 
-    Route::view('profile', 'profile')->name('profile');
+    Route::get('profile', Profile::class)->name('profile');
+
+    Route::get('/logout', function () {
+        auth()->logout();
+        request()->session()->invalidate();
+        request()->session()->regenerateToken();
+
+        return redirect('/');
+    })->name('logout');
 });
 
 require __DIR__.'/auth.php';
