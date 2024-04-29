@@ -5,26 +5,37 @@
 use App\Http\Controllers\SendContactEmailController;
 use App\Http\Middleware\TrackOnlineUser;
 use App\Http\Middleware\TrackVisits;
+use App\Livewire\Admin\ContactMessage;
 use App\Livewire\Admin\Dashboard;
+use App\Livewire\Admin\SiteConfig;
+use App\Livewire\Admin\User;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
-Route::view('/', 'site.index')->middleware([TrackOnlineUser::class, TrackVisits::class])->name('site.index');
-Route::view('/sobre', 'site.about')->middleware([TrackOnlineUser::class, TrackVisits::class])->name('site.about');
-Route::view('/teste', 'welcome')->middleware([TrackOnlineUser::class, TrackVisits::class]);
+Route::middleware([TrackOnlineUser::class, TrackVisits::class])->group(function(){
+    Route::view('/', 'site.index')->name('site.index');
+    Route::view('/sobre', 'site.about')->name('site.about');
+    Route::view('/contato', 'site.contact')->name('site.contact');
+    Route::view('/servicos', 'site.services')->name('site.services');
+    Route::view('/software', 'site.software')->name('site.software');
 
-// Route::get('/a', function () {
-//     Artisan::call('onlineusers:clean');
+    Route::post('/contato', SendContactEmailController::class)->name('site.contact-post');
 
-//     // ...
-// });
+    Route::view('/teste', 'welcome');
+});
 
-Route::get('dashboard', Dashboard::class)
-    ->middleware(['auth', 'verified'])
-    ->name('dashboard');
 
-Route::view('profile', 'profile')
-    ->middleware(['auth'])
-    ->name('profile');
+Route::middleware('auth')->group(function(){
+    Route::get('dashboard', Dashboard::class)->name('dashboard');
+    Route::get('site-config', SiteConfig::class)->name('site.config');
+    Route::get('mensagens-contato', ContactMessage::class)->name('site.contacts-messages');
+
+    Route::get('dashboard', Dashboard::class)->name('dashboard');
+    Route::get('users', User\Index::class)->name('users.index');
+    Route::get('users/create', User\Create::class)->name('users.create');
+    Route::get('users/{user}/edit', User\Edit::class)->name('users.edit');
+
+    Route::view('profile', 'profile')->name('profile');
+});
 
 require __DIR__.'/auth.php';
