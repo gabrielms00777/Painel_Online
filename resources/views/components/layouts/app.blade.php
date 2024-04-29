@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <tallstackui:script />
     @livewireStyles
+    <link rel="stylesheet" href="{{ asset('build/assets/app-CdJw4UxT.css') }}">
+    <script src="{{ asset('build/assets/app-D2jpX1vH.js') }}" defer></script>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <style>
         @import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
@@ -49,7 +51,8 @@
 
     <aside class="relative bg-sidebar h-screen w-64 hidden sm:block shadow-xl">
         <div class="p-6">
-            <a href="{{ route('dashboard') }}" class="text-white text-3xl font-semibold uppercase hover:text-gray-300">GCM
+            <a href="{{ route('dashboard') }}"
+                class="text-white text-3xl font-semibold uppercase hover:text-gray-300">GCM
                 Admin</a>
             <a href='{{ route('site.index') }}' target="_blank"
                 class="w-full bg-white cta-btn font-semibold py-2 mt-5 rounded-br-lg rounded-bl-lg rounded-tr-lg shadow-lg hover:shadow-xl hover:bg-gray-300 flex items-center justify-center">
