@@ -10,7 +10,10 @@ use App\Livewire\Admin\Dashboard;
 use App\Livewire\Admin\Profile;
 use App\Livewire\Admin\SiteConfig;
 use App\Livewire\Admin\User;
-use Illuminate\Support\Facades\Artisan;
+use App\Mail\ContactMessageReceived;
+use App\Mail\TesteMail;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware([TrackOnlineUser::class, TrackVisits::class])->group(function(){
@@ -21,6 +24,12 @@ Route::middleware([TrackOnlineUser::class, TrackVisits::class])->group(function(
     Route::view('/software', 'site.software')->name('site.software');
 
     Route::post('/contato', SendContactEmailController::class)->name('site.contact-post');
+    // Route::post('/contato', function(Request $request){
+    //     $email = $request->get('email');
+
+    //     // return new TesteMail;
+    //     Mail::to('admin@admin')->send(new TesteMail());
+    // })->name('site.contact-post');
 
     Route::view('/teste', 'welcome');
 });

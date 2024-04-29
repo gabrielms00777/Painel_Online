@@ -36,7 +36,11 @@ class Dashboard extends Component
     #[Computed()]
     public function allVisitorCount()
     {
-        return Visit::query()->count();
+        // return Visit::query()->count();
+        return DB::table('visits')
+        ->select('cookie_id')
+        ->distinct()
+        ->count();
     }
     #[Computed()]
     public function allVisitor()

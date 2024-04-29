@@ -84,19 +84,19 @@
                             @csrf
                             <div class="form-group">
                                 <input type="text" class="email-bt" placeholder="Seu Nome"
-                                    value="{{ old('name') ?? 'Teste' }}" name="name" required>
+                                    value="{{ old('name') ?? '' }}" name="name" required>
                             </div>
                             <div class="form-group">
                                 <input type="text" class="email-bt" placeholder="Seu Email" name="email"
-                                    value="{{ old('email') ?? 'admin@admin.com' }}" required>
+                                    value="{{ old('email') ?? '' }}" required>
                             </div>
                             <div class="form-group">
                                 <input type="text" class="email-bt" placeholder="Seu Telefone" name="phone"
-                                    value="{{ old('phone') ?? 'phone' }}" required>
+                                    value="{{ old('phone') ?? '' }}" required>
                             </div>
                             <div class="form-group">
                                 <textarea required class="massage-bt" placeholder="Sua Mensagem (Detalhe seu projeto, orçamento, etc.)" rows="5"
-                                    id="comment" name="message">{{ old('message') ?? 'testeeeeee' }}</textarea>
+                                    id="comment" name="message">{{ old('message') ?? '' }}</textarea>
                             </div>
                             <div class="send_btn"><button class="subscribe_bt subscribe_btn" style=""
                                     type="submit">Enviar Solicitação</button></div>

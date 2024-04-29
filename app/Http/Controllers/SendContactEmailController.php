@@ -21,7 +21,7 @@ class SendContactEmailController extends Controller
 
         $contact = ContactMessage::create($data);
 
-        SendContactEmail::dispatch($contact);
+        // SendContactEmail::dispatch($contact);
 
         return back()->with('success', 'Mensagem enviada com sucesso!');
     }

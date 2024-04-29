@@ -21,7 +21,7 @@ class SendContactEmail
      * Create a new job instance.
      */
     public function __construct(
-        public readonly ContactMessage $contactMessage
+        // public readonly ContactMessage $contactMessage
     )
     {
         //
@@ -32,6 +32,8 @@ class SendContactEmail
      */
     public function handle(): void
     {
-        Mail::to(SiteConfig::getConfig()->contact_email)->send(new ContactMessageReceived($this->contactMessage));
+        // $configs = SiteConfig::getConfig();
+        // Mail::to($configs->contact_email, $configs->contact_name)->send(new ContactMessageReceived($this->contactMessage));
+        Mail::to('admin@admin.com', 'Gabriel')->send(new ContactMessageReceived());
     }
 }

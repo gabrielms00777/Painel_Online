@@ -15,10 +15,4 @@ class Visit extends Model
         'ip',
     ];
 
-    protected function casts(): array
-    {
-        return [
-            'last_activity' => 'datetime',
-        ];
-    }
 }
