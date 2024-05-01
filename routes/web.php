@@ -10,6 +10,7 @@ use App\Livewire\Admin\Dashboard;
 use App\Livewire\Admin\Profile;
 use App\Livewire\Admin\SiteConfig;
 use App\Livewire\Admin\User;
+use App\Livewire\Admin\Software;
 use App\Mail\ContactMessageReceived;
 use App\Mail\TesteMail;
 use Illuminate\Http\Request;
@@ -44,6 +45,9 @@ Route::middleware('auth')->group(function(){
     Route::get('users', User\Index::class)->name('users.index');
     Route::get('users/create', User\Create::class)->name('users.create');
     Route::get('users/{user}/edit', User\Edit::class)->name('users.edit');
+    Route::get('softwares', Software\Index::class)->name('softwares.index');
+    Route::get('softwares/create', Software\Create::class)->name('softwares.create');
+    Route::get('softwares/{user}/edit', Software\Edit::class)->name('softwares.edit');
 
     Route::get('profile', Profile::class)->name('profile');
 

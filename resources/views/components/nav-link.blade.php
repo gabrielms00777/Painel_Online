@@ -11,7 +11,7 @@ $classes = ($active ?? false)
 </a> --}}
 
 <a wire:navigare href="{{ $route }}"
-    class="{{ $isActive() ? 'active-nav-link' : '' }} flex items-center text-white py-4 pl-6 nav-item">
+    class="{{ $isActive() ? 'active-nav-link' : '' }} flex items-center text-white py-3 pl-6 nav-item">
     <x-ts-icon name="{{ $icon }}" class="h-5 w-5 mr-2" />
     {{ $label }}
 </a>

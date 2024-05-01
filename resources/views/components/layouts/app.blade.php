@@ -52,18 +52,18 @@
     <aside class="relative bg-sidebar h-screen w-64 hidden sm:block shadow-xl">
         <div class="p-6">
             <a href="{{ route('dashboard') }}"
-                class="text-white text-3xl font-semibold uppercase hover:text-gray-300">GCM
-                Admin</a>
+                class="text-white text-3xl font-semibold uppercase hover:text-gray-300">Admin</a>
             <a href='{{ route('site.index') }}' target="_blank"
                 class="w-full bg-white cta-btn font-semibold py-2 mt-5 rounded-br-lg rounded-bl-lg rounded-tr-lg shadow-lg hover:shadow-xl hover:bg-gray-300 flex items-center justify-center">
                 <i class="fas fa-plus mr-3"></i> Visitar Site
             </a>
         </div>
-        <nav class="text-white text-base font-semibold pt-3">
+        <nav class="text-white text-base font-semibold pt-3  overflow-auto">
             <x-nav-link route="{{ route('dashboard') }}" label="Dashboard" icon="home" />
             <p class=" text-white py-2 pl-6 text-sm">Gerenciamento</p>
             <x-nav-link route="{{ route('profile') }}" label="Perfil" icon="user" />
             <x-nav-link route="{{ route('users.index') }}" label="Usuários" icon="users" />
+            <x-nav-link route="{{ route('softwares.index') }}" label="Editar Sistemas" icon="globe-alt" />
             <x-nav-link route="{{ route('site.config') }}" label="Editar Site" icon="pencil-square" />
             <x-nav-link route="{{ route('site.contacts-messages') }}" label="Mensagens de Contato"
                 icon="chat-bubble-bottom-center-text" />
@@ -79,11 +79,11 @@
                 Whatsapp
             </a>
         </nav>
-        <a href="#"
+        {{-- <a href="#"
             class="absolute w-full upgrade-btn bottom-0 active-nav-link text-white flex items-center justify-center py-4">
             <i class="fas fa-arrow-circle-up mr-3"></i>
             Upgrade to Pro!
-        </a>
+        </a> --}}
     </aside>
 
     <div class="relative w-full flex flex-col h-screen overflow-y-hidden">
