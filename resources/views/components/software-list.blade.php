@@ -3,7 +3,7 @@
     <div class="owl-carousel">
         @foreach ($softwares as $software)
         <div>
-            {{asset('storage/'.$software->image)}}
+            {{-- {{asset('storage/'.$software->image)}} --}}
            <img src="{{asset('storage/'.$software->image)}}" class="image_6" alt="Software de automação">
            <h4 class="ipsum_text">{{$software->name}}</h4>
         </div>

@@ -18,6 +18,15 @@ use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware([TrackOnlineUser::class, TrackVisits::class])->group(function(){
+    Route::view('/saascandy', 'demos.saascandy.index')->name('saascandy.index');
+    Route::view('/scholar', 'demos.scholar.index')->name('scholar.index');
+    
+    Route::view('/guarder', 'demos.guarder.index')->name('guarder.index');
+    Route::view('/guarder/about', 'demos.guarder.about')->name('guarder.about');
+    Route::view('/guarder/contact', 'demos.guarder.contact')->name('guarder.contact');
+    Route::view('/guarder/guard', 'demos.guarder.guard')->name('guarder.guards');
+    Route::view('/guarder/service', 'demos.guarder.service')->name('guarder.services');
+
     Route::view('/', 'site.index')->name('site.index');
     Route::view('/sobre', 'site.about')->name('site.about');
     Route::view('/contato', 'site.contact')->name('site.contact');
