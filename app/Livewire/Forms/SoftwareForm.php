@@ -11,13 +11,13 @@ class SoftwareForm extends Form
     public ?Software $software = null;
 
     #[Validate(['required', 'string', 'max:255'])]
-    public string $name = 'teste';
+    public string $name = '';
 
     #[Validate(['required', 'max:255', 'string'])]
-    public string $description = 'teste';
+    public string $description = '';
     
     #[Validate(['required', 'max:255', 'string'])]
-    public string $url = 'teste';
+    public string $url = '';
 
     #[Validate(['required', 'image', 'max:1024'])]
     public $image;

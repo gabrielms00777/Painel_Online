@@ -5,7 +5,7 @@
         <div>
             {{-- {{asset('storage/'.$software->image)}} --}}
            <img src="{{asset('storage/'.$software->image)}}" class="image_6" alt="Software de automação">
-           <h4 class="ipsum_text">{{$software->name}}</h4>
+           <h4 class="ipsum_text"><a href="{{$software->url}}" target="_blank">{{$software->name}}</a></h4>
         </div>
             
         @endforeach
